@@ -371,6 +371,8 @@
                             <a class="footer-link" href="tel:+380991111111">+38 099 111 11 11</a>
                         </li>
                     </ul>
+                    
+                </address>
                 </div>
                 <div class="footer-link-box">
                     <p class="link-text">Присоединяйтесь</p>
@@ -405,8 +407,22 @@
                         </li>
                     </ul>
                 </div>
-        </address>
+                <div class="footer-subscribe-form">
+                    <form action="#" class="footer-form">
+                        <p class="footer-form-head">Подпишитесь на рассылку</p>
+                        <label class="footer-form-field">
+                        <input type="email" class="footer-form-input" name="user-email" placeholder="E-mail">
+                        <button type="submit" class="footer-btn">
+                            Подписаться
+                            <svg class="footer-btn-img" width="24" height="24">
+                                <use href="./images/sprite.svg#send"></use>
+                            </svg>
+                        </button>
+                    </label>
+                    </form>
+                </div>
         </div>
+     
     </footer>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal" >
@@ -415,6 +431,43 @@
                     <use href="./images/sprite.svg#close-button"></use>
                 </svg>
             </button>
+            <form action="#" class="modal-form">
+                <p class="modal-form-head">Оставьте свои данные, мы вам перезвоним</p>
+                <label class="modal-form-field">
+                    Имя
+                    <span class="modal-form-input-wrapper">
+                        <input type="text" class="modal-form-input" name="user-name" minlength="2" title="Имя должно содержать символы кириллицы или латиницы" pattern="[a-zA-Zа-яёА-ЯЁ]+" required>
+                        <svg class="modal-form-icon">
+                            <use href="./images/sprite.svg#modal-person"></use>
+                        </svg>
+                    </span>
+                </label>
+                <label class="modal-form-field">
+                    Телефон
+                    <span class="modal-form-input-wrapper">
+                        <input type="tel" class="modal-form-input" name="user-phone" title="123-456-78-91" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required >
+                        <svg class="modal-form-icon">
+                            <use href="./images/sprite.svg#modal-phone"></use>
+                        </svg>
+                    </span>
+                </label>
+                <label class="modal-form-field">
+                    Почта
+                    <span class="modal-form-input-wrapper">
+                        <input type="email" class="modal-form-input" name="user-email">
+                        <svg class="modal-form-icon">
+                            <use href="./images/sprite.svg#modal-email"></use>
+                        </svg>
+                    </span>
+                </label>
+                <label class="modal-form-field">
+                    Комментарий
+                    <textarea class="modal-form-message" name="user-message" placeholder="Введите текст"></textarea>
+                </label> 
+                <input class="modal-form-checkbox visually-hidden" type="checkbox" id="accept-policy" >
+                <label for="accept-policy" class="modal-form-checkbox-label">Соглашаюсь с рассылкой и принимаю&nbsp;<a href="#" class="modal-form-label-link">Условия договора</a></label>
+                <button type="submit" class="modal-form-btn">Отправить</button>
+            </form>
         </div>
     </div>
 <script src="./js/modal.js"></script>
